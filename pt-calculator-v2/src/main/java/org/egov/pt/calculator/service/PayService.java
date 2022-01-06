@@ -161,7 +161,7 @@ public class PayService {
 		//BigDecimal taxAmt = getTaxAmountToCalculateRebateOnApplicables(demand, payments);
 		//Assumtion: Partial payment is not allowed 
 		for (DemandDetail demandDetail : demand.getDemandDetails()) {
-			if (demandDetail.getTaxHeadMasterCode().equalsIgnoreCase("PT_TAX")) {
+			if (demandDetail.getTaxHeadMasterCode().equalsIgnoreCase("PT_TAX") && demandDetail.getTaxHeadMasterCode().equalsIgnoreCase("SWATCHATHA_TAX") ) {
 					taxAmt = demandDetail.getTaxAmount();
 			}
 		}
